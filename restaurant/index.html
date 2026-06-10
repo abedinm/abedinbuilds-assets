@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="Restaurant Website Kit with WhatsApp Ordering | AbedinBuilds" />
+<meta property="og:description" content="A one-page restaurant site - menu, hours, reviews, and one-tap WhatsApp ordering. No monthly fees, no coding." />
+<meta property="og:image" content="https://abedinm.github.io/abedinbuilds-assets/restaurant-og.png" />
+<meta property="og:url" content="https://abedinm.github.io/abedinbuilds-assets/restaurant/" />
+<title>Saffron House — Modern Family Restaurant</title>
+<meta name="description" content="Saffron House restaurant. Fresh, made-to-order food. See the menu and order on WhatsApp." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ===== EDIT THESE TO REBRAND IN 30 SECONDS ===== */
+  :root{
+    --bg:#fff8f0;
+    --bg-soft:#fdefdd;
+    --card:#ffffff;
+    --ink:#2b2118;
+    --muted:#7a6a5b;
+    --line:#eaddcc;
+    --brand:#d95d27;        /* main accent */
+    --brand-dark:#b34715;
+    --green:#2f5d46;        /* secondary accent */
+    --radius:16px;
+    --max:1060px;
+    --font-head:'Fraunces',serif;
+    --font-body:'Inter',sans-serif;
+    --currency:'$';
+  }
+  /* ================================================ */
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  section{padding:88px 24px}
+  .wrap{max-width:var(--max);margin:0 auto}
+  h1,h2,h3{font-family:var(--font-head);line-height:1.12;letter-spacing:-.01em}
+  .eyebrow{color:var(--brand);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+  .muted{color:var(--muted)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,248,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+  .logo{font-family:var(--font-head);font-weight:900;font-size:1.3rem}
+  .logo span{color:var(--brand)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--muted);font-weight:600;font-size:.93rem;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--brand);color:#fff;font-weight:700;padding:12px 22px;border-radius:999px;font-size:.95rem;transition:transform .15s,background .2s,box-shadow .2s;border:none;cursor:pointer}
+  .btn:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:0 12px 28px -10px var(--brand)}
+  .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--brand);color:var(--brand);box-shadow:none}
+  .nav-links a.btn,.nav-links a.btn:hover{color:#fff}
+  .btn.wa{background:#1faa55}
+  .btn.wa:hover{background:#178a45;box-shadow:0 12px 28px -10px #1faa55}
+  .menu-toggle{display:none;background:none;border:none;color:var(--ink);font-size:1.6rem;cursor:pointer}
+
+  .hero{position:relative;padding-top:72px;padding-bottom:80px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,5.5vw,4rem);font-weight:900;margin:16px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--brand)}
+  .hero p{font-size:1.1rem;color:var(--muted);max-width:480px;margin-bottom:30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .hero-img{border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(43,33,24,.35)}
+  .badges{display:flex;gap:10px;flex-wrap:wrap}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px;font-size:.85rem;font-weight:600;color:var(--muted)}
+  .badge b{color:var(--green)}
+
+  .strip{background:var(--green);color:#f2efe6;padding:18px 24px;text-align:center;font-weight:600;font-size:.95rem}
+  .strip b{color:#ffd9a0}
+
+  .head{max-width:620px;margin-bottom:48px}
+  .head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:700;margin-bottom:12px}
+  .head p{color:var(--muted);font-size:1.04rem}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .menu-col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .menu-col h3{font-size:1.25rem;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--bg-soft);color:var(--brand-dark)}
+  .item{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line)}
+  .item:last-child{border-bottom:none}
+  .item .nm{font-weight:600;font-size:.97rem}
+  .item .ds{color:var(--muted);font-size:.84rem}
+  .price{font-family:var(--font-head);font-weight:700;color:var(--green);white-space:nowrap}
+  .price::before{content:var(--currency)}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .gallery .shot{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:1;background:var(--card)}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+  .gallery .shot:hover img{transform:scale(1.06)}
+
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .stars{color:#e8a13c;letter-spacing:2px;margin-bottom:12px}
+  .review p{font-size:.96rem;margin-bottom:14px}
+  .review .who{font-weight:700;font-size:.88rem}
+
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .info-card h3{font-size:1.2rem;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:7px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .hours tr:last-child td{border-bottom:none}
+  .today{color:var(--brand);font-weight:700}
+  .addr{color:var(--muted);margin-bottom:18px}
+
+  .order{background:var(--green);border-radius:24px;padding:56px 40px;text-align:center;color:#f2efe6}
+  .order h2{font-size:clamp(1.8rem,3.4vw,2.4rem);color:#fff;margin-bottom:12px}
+  .order p{color:#cfdcd2;max-width:480px;margin:0 auto 28px}
+
+  footer{border-top:1px solid var(--line);padding:36px 24px;text-align:center;color:var(--muted);font-size:.9rem}
+  footer .social{display:flex;gap:20px;justify-content:center;margin-bottom:14px}
+  footer .social a{font-weight:600;transition:color .2s}
+  footer .social a:hover{color:var(--brand)}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .menu-grid,.reviews{grid-template-columns:1fr}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .info-grid{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:60px 0 auto 0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:24px;gap:16px;transform:translateY(-140%);transition:transform .3s}
+    .nav-links.open{transform:none}
+    .menu-toggle{display:block}
+    section{padding:64px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Saffron<span>House</span></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit us</a>
+      <a class="btn" href="https://wa.me/8801XXXXXXXXX?text=Hi!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order now</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Fresh &middot; Local &middot; Made to order</span>
+      <h1>Honest food, <em>served warm</em>, every single day.</h1>
+      <p>From slow-cooked classics to chef's specials, everything at Saffron House is made fresh when you order it. Dine in, take away, or get it delivered.</p>
+      <div class="hero-cta">
+        <a class="btn wa" href="https://wa.me/8801XXXXXXXXX?text=Hi!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="badges">
+        <span class="badge"><b>&#9733; 4.8</b> 700+ reviews</span>
+        <span class="badge"><b>25-40 min</b> delivery</span>
+        <span class="badge"><b>Open today</b> 11:00 &ndash; 22:00</span>
+      </div>
+    </div>
+    <div class="hero-img reveal">
+      <img src="images/hero.svg" alt="Signature dishes at Saffron House" />
+    </div>
+  </div>
+</section>
+
+<div class="strip"><b>Today's special:</b> Chef's saffron rice bowl with grilled chicken — 20% off until 5 PM</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Cooked fresh, priced fair</h2>
+      <p>Everything below is available for dine-in, takeaway, and delivery. Tap "Order now" and tell us what you'd like.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-col reveal">
+        <h3>Starters</h3>
+        <div class="item"><div><div class="nm">Crispy spring rolls</div><div class="ds">Vegetable, sweet chili dip</div></div><div class="price">4.50</div></div>
+        <div class="item"><div><div class="nm">Garlic butter prawns</div><div class="ds">Pan-seared, lemon, herbs</div></div><div class="price">7.90</div></div>
+        <div class="item"><div><div class="nm">Soup of the day</div><div class="ds">Ask our team</div></div><div class="price">3.90</div></div>
+        <div class="item"><div><div class="nm">Loaded fries</div><div class="ds">Cheese, jalapeño, house sauce</div></div><div class="price">5.50</div></div>
+      </div>
+      <div class="menu-col reveal">
+        <h3>Mains</h3>
+        <div class="item"><div><div class="nm">Saffron rice bowl</div><div class="ds">Grilled chicken, signature spice</div></div><div class="price">9.90</div></div>
+        <div class="item"><div><div class="nm">Smash burger</div><div class="ds">Double beef, cheddar, brioche</div></div><div class="price">8.50</div></div>
+        <div class="item"><div><div class="nm">Slow-cooked beef curry</div><div class="ds">With rice or fresh naan</div></div><div class="price">11.50</div></div>
+        <div class="item"><div><div class="nm">Garden pasta</div><div class="ds">Roast vegetables, basil cream</div></div><div class="price">8.90</div></div>
+      </div>
+      <div class="menu-col reveal">
+        <h3>Drinks &amp; desserts</h3>
+        <div class="item"><div><div class="nm">Fresh lime cooler</div><div class="ds">Mint, soda, lightly sweet</div></div><div class="price">2.90</div></div>
+        <div class="item"><div><div class="nm">Mango lassi</div><div class="ds">Thick, made with real mango</div></div><div class="price">3.50</div></div>
+        <div class="item"><div><div class="nm">Chocolate lava cake</div><div class="ds">Warm, vanilla ice cream</div></div><div class="price">5.90</div></div>
+        <div class="item"><div><div class="nm">Burnt cheesecake</div><div class="ds">House favourite</div></div><div class="price">5.50</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Gallery</span>
+      <h2>A taste of what's waiting</h2>
+    </div>
+    <div class="gallery">
+      <div class="shot reveal"><img src="images/dish-1.svg" alt="Saffron rice bowl" /></div>
+      <div class="shot reveal"><img src="images/dish-2.svg" alt="Smash burger" /></div>
+      <div class="shot reveal"><img src="images/dish-3.svg" alt="Dessert" /></div>
+      <div class="shot reveal"><img src="images/dish-4.svg" alt="Fresh drinks" /></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Reviews</span>
+      <h2>What regulars say</h2>
+    </div>
+    <div class="reviews">
+      <div class="review reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The saffron rice bowl is the best thing I've eaten this year. Generous portions, fast delivery, still hot."</p><div class="who">— Nadia K.</div></div>
+      <div class="review reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Ordered on WhatsApp, food arrived in half an hour. The smash burger is dangerously good."</p><div class="who">— Omar F.</div></div>
+      <div class="review reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Family dinner every Friday. Staff remember our order. It feels like eating at a friend's house."</p><div class="who">— The Hossain family</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Visit us</span>
+      <h2>Hours &amp; location</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <h3>Opening hours</h3>
+        <table class="hours">
+          <tr><td>Saturday &ndash; Thursday</td><td>11:00 &ndash; 22:00</td></tr>
+          <tr><td class="today">Friday</td><td class="today">14:00 &ndash; 23:00</td></tr>
+          <tr><td>Public holidays</td><td>12:00 &ndash; 22:00</td></tr>
+        </table>
+      </div>
+      <div class="info-card reveal">
+        <h3>Find us</h3>
+        <p class="addr">12 Green Road, Block C<br/>Your City 1205<br/>Phone: +880 1X XXXX XXXX</p>
+        <a class="btn ghost" href="https://maps.google.com/?q=12+Green+Road" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="order reveal">
+      <h2>Hungry? We're already cooking.</h2>
+      <p>Send us a message with what you'd like — we confirm in minutes and tell you exactly when it'll be ready.</p>
+      <a class="btn wa" href="https://wa.me/8801XXXXXXXXX?text=Hi!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="social">
+    <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a>
+  </div>
+  <div>&copy; 2026 Saffron House. All rights reserved.</div>
+</footer>
+
+<script>
+  const t=document.getElementById('menuToggle'),l=document.getElementById('navLinks');
+  t.addEventListener('click',()=>l.classList.toggle('open'));
+  l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

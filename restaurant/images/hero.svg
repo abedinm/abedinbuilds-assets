@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640">
+  <rect width="800" height="640" fill="#f3e3cd"/>
+  <circle cx="120" cy="80" r="160" fill="#eed7b8"/>
+  <circle cx="720" cy="600" r="200" fill="#eed7b8"/>
+  <!-- table runner -->
+  <rect x="0" y="240" width="800" height="160" fill="#2f5d46" opacity="0.12"/>
+  <!-- big plate: rice bowl -->
+  <circle cx="400" cy="320" r="170" fill="#ffffff"/>
+  <circle cx="400" cy="320" r="170" fill="none" stroke="#e3d2ba" stroke-width="3"/>
+  <circle cx="400" cy="320" r="128" fill="#f7c873"/>
+  <g fill="#fdf3df">
+    <ellipse cx="350" cy="290" rx="26" ry="14"/><ellipse cx="420" cy="270" rx="24" ry="13"/><ellipse cx="450" cy="330" rx="26" ry="14"/><ellipse cx="370" cy="360" rx="25" ry="13"/><ellipse cx="410" cy="320" rx="22" ry="12"/>
+  </g>
+  <!-- grilled chicken strips -->
+  <g fill="#b35a2b">
+    <rect x="330" y="305" width="70" height="20" rx="10" transform="rotate(-15 365 315)"/>
+    <rect x="395" y="340" width="70" height="20" rx="10" transform="rotate(10 430 350)"/>
+    <rect x="380" y="280" width="64" height="18" rx="9" transform="rotate(25 412 289)"/>
+  </g>
+  <g stroke="#8a3f1a" stroke-width="3" stroke-linecap="round">
+    <path d="M345 308 l40 -10 M408 348 l42 8 M392 290 l36 16"/>
+  </g>
+  <!-- herbs -->
+  <g fill="#2f5d46">
+    <circle cx="340" cy="270" r="5"/><circle cx="455" cy="295" r="5"/><circle cx="430" cy="370" r="5"/><circle cx="360" cy="340" r="4"/>
+  </g>
+  <!-- side plate top-left: salad -->
+  <circle cx="150" cy="170" r="90" fill="#ffffff" stroke="#e3d2ba" stroke-width="3"/>
+  <g fill="#3f7a55">
+    <ellipse cx="125" cy="155" rx="30" ry="18" transform="rotate(-20 125 155)"/>
+    <ellipse cx="170" cy="170" rx="30" ry="18" transform="rotate(15 170 170)"/>
+    <ellipse cx="145" cy="195" rx="28" ry="16" transform="rotate(-5 145 195)"/>
+  </g>
+  <g fill="#e0712c"><circle cx="135" cy="165" r="8"/><circle cx="170" cy="150" r="8"/><circle cx="160" cy="195" r="8"/></g>
+  <!-- side plate bottom-right: naan -->
+  <circle cx="650" cy="470" r="95" fill="#ffffff" stroke="#e3d2ba" stroke-width="3"/>
+  <ellipse cx="650" cy="470" rx="64" ry="50" fill="#efc27d"/>
+  <g fill="#d99c4e"><circle cx="630" cy="455" r="6"/><circle cx="668" cy="448" r="5"/><circle cx="655" cy="485" r="6"/><circle cx="625" cy="488" r="5"/><circle cx="680" cy="475" r="5"/></g>
+  <!-- drink top-right -->
+  <g transform="translate(640,120)">
+    <rect x="-28" y="-10" width="56" height="120" rx="12" fill="#ffffff" stroke="#e3d2ba" stroke-width="3"/>
+    <rect x="-22" y="30" width="44" height="74" rx="9" fill="#f4a83d"/>
+    <rect x="-22" y="30" width="44" height="20" fill="#fbd089"/>
+    <rect x="6" y="-34" width="7" height="50" rx="3.5" fill="#d95d27" transform="rotate(14 9 -9)"/>
+    <ellipse cx="-10" cy="-6" rx="12" ry="6" fill="#3f7a55"/>
+  </g>
+  <!-- cutlery -->
+  <g stroke="#7a6a5b" stroke-width="7" stroke-linecap="round">
+    <path d="M225 420 l60 60"/>
+    <path d="M560 200 l46 -46"/>
+  </g>
+  <g fill="#7a6a5b">
+    <circle cx="222" cy="417" r="9"/>
+    <rect x="598" y="140" width="18" height="26" rx="6"/>
+  </g>
+</svg>

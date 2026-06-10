@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs>
+    <linearGradient id="p3bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#131019"/>
+      <stop offset="1" stop-color="#0b0d12"/>
+    </linearGradient>
+    <linearGradient id="p3a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8a9b"/>
+      <stop offset="1" stop-color="#9b8cff"/>
+    </linearGradient>
+    <linearGradient id="p3b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ea8fe"/>
+      <stop offset="1" stop-color="#3ddc84"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#p3bg)"/>
+  <!-- header -->
+  <rect x="80" y="60" width="160" height="20" rx="8" fill="#e8ecf4" opacity="0.92"/>
+  <rect x="640" y="56" width="100" height="28" rx="14" fill="url(#p3a)"/>
+  <rect x="756" y="56" width="64" height="28" rx="14" fill="none" stroke="#222a39"/>
+  <!-- masonry grid -->
+  <rect x="80" y="120" width="235" height="280" rx="16" fill="url(#p3a)" opacity="0.85"/>
+  <rect x="80" y="420" width="235" height="140" rx="16" fill="#161b27" stroke="#222a39"/>
+  <rect x="333" y="120" width="235" height="160" rx="16" fill="#161b27" stroke="#222a39"/>
+  <rect x="333" y="300" width="235" height="260" rx="16" fill="url(#p3b)" opacity="0.8"/>
+  <rect x="586" y="120" width="235" height="220" rx="16" fill="#161b27" stroke="#222a39"/>
+  <rect x="586" y="360" width="235" height="200" rx="16" fill="#9b8cff" opacity="0.75"/>
+  <!-- captions on dark tiles -->
+  <rect x="100" y="500" width="120" height="12" rx="6" fill="#e8ecf4" opacity="0.85"/>
+  <rect x="100" y="522" width="80" height="9" rx="4" fill="#97a3b6" opacity="0.5"/>
+  <rect x="353" y="220" width="120" height="12" rx="6" fill="#e8ecf4" opacity="0.85"/>
+  <rect x="353" y="242" width="80" height="9" rx="4" fill="#97a3b6" opacity="0.5"/>
+  <rect x="606" y="280" width="120" height="12" rx="6" fill="#e8ecf4" opacity="0.85"/>
+  <rect x="606" y="302" width="80" height="9" rx="4" fill="#97a3b6" opacity="0.5"/>
+  <!-- play glyph on colored tile -->
+  <circle cx="450" cy="420" r="34" fill="#0b0d12" opacity="0.55"/>
+  <path d="M440 402 L470 420 L440 438 Z" fill="#e8ecf4"/>
+</svg>

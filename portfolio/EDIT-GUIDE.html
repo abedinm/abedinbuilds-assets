@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Edit Guide — Launch-Ready Portfolio Template</title>
+<style>
+  body{font-family:Georgia,'Times New Roman',serif;max-width:720px;margin:40px auto;padding:0 24px;color:#1a1d24;line-height:1.6;font-size:15px}
+  h1{font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;margin-bottom:4px}
+  h2{font-family:Arial,Helvetica,sans-serif;font-size:1.05rem;margin:26px 0 8px;border-bottom:2px solid #6ea8fe;padding-bottom:4px}
+  .sub{color:#667;margin-bottom:24px}
+  code,pre{font-family:Consolas,Menlo,monospace;background:#f2f4f8;border-radius:4px;font-size:.86em}
+  code{padding:2px 6px}
+  pre{padding:12px 16px;overflow-x:auto}
+  ol li,ul li{margin-bottom:6px}
+  .tip{background:#eef4ff;border-left:4px solid #6ea8fe;padding:10px 14px;border-radius:0 6px 6px 0;margin:14px 0}
+  @media print{body{margin:0;font-size:12px}}
+</style>
+</head>
+<body>
+
+<h1>Launch-Ready Portfolio Template — Edit Guide</h1>
+<p class="sub">Everything lives in one file: <code>index.html</code>. Open it in any text editor (VS Code, Notepad, anything). No installs, no build tools.</p>
+
+<h2>1. Make it yours (5 minutes)</h2>
+<ol>
+  <li><strong>Name &amp; title:</strong> search for <code>Aria</code> and replace every match with your name. Update the <code>&lt;title&gt;</code> and <code>&lt;meta name="description"&gt;</code> at the top.</li>
+  <li><strong>Headline &amp; intro:</strong> edit the text inside the <code>&lt;section class="hero"&gt;</code> block.</li>
+  <li><strong>Contact:</strong> search for <code>hello@example.com</code> and <code>8801XXXXXXXXX</code> — replace with your email and WhatsApp number (country code, no + or spaces).</li>
+  <li><strong>Social links:</strong> in the <code>&lt;footer&gt;</code>, replace each <code>href="#"</code> with your profile URLs. Delete any you don't use.</li>
+</ol>
+
+<h2>2. Swap the images</h2>
+<p>All images are in the <code>images/</code> folder. Replace them with your own photos/screenshots — keep the same file names and you don't have to touch the code at all. Or use new names and update the <code>src="images/..."</code> paths:</p>
+<ul>
+  <li><code>portrait.svg</code> — your photo (square works best)</li>
+  <li><code>project-1.svg</code> … <code>project-4.svg</code> — screenshots of your work (landscape)</li>
+  <li><code>about.svg</code> — a second photo or workspace shot</li>
+</ul>
+<div class="tip">JPG and PNG work exactly the same: <code>src="images/portrait.jpg"</code>. Keep images under ~300 KB each for fast loading.</div>
+
+<h2>3. Rebrand the colors &amp; fonts (30 seconds)</h2>
+<p>At the top of <code>index.html</code> there is one marked block:</p>
+<pre>:root{
+  --bg:#0b0d12;        /* page background */
+  --brand:#6ea8fe;     /* main accent color */
+  --brand-2:#9b8cff;   /* gradient partner */
+  --radius:18px;       /* corner roundness */
+  ...
+}</pre>
+<p>Change <code>--brand</code> and <code>--brand-2</code> to your two brand colors — every button, link, and gradient updates automatically. For fonts, change the Google Fonts <code>&lt;link&gt;</code> in the <code>&lt;head&gt;</code> and the <code>--font-head</code> / <code>--font-body</code> names.</p>
+
+<h2>4. Edit the sections</h2>
+<ul>
+  <li><strong>Services:</strong> three <code>&lt;div class="card"&gt;</code> blocks — edit titles and text. Copy-paste a block to add a fourth.</li>
+  <li><strong>Projects:</strong> four <code>&lt;a class="project"&gt;</code> blocks — set the <code>href</code> to the live project URL, swap the image, edit the caption.</li>
+  <li><strong>Testimonial:</strong> edit the quote and name in the <code>&lt;div class="quote"&gt;</code> block. Delete the whole section if you don't have one yet.</li>
+  <li><strong>Trust bar:</strong> the row of company names under the hero — replace with clients/schools, or delete the <code>&lt;div class="trust"&gt;</code> block.</li>
+</ul>
+
+<h2>5. Put it online (free)</h2>
+<ul>
+  <li><strong>Netlify:</strong> go to app.netlify.com → drag the whole folder onto the page. Live in 30 seconds.</li>
+  <li><strong>GitHub Pages:</strong> push the folder to a repo → Settings → Pages → deploy from branch.</li>
+  <li><strong>Vercel:</strong> vercel.com → New Project → import the folder.</li>
+</ul>
+
+<div class="tip"><strong>Stuck?</strong> Message me on Gumroad — I reply within 24 hours.</div>
+
+</body>
+</html>

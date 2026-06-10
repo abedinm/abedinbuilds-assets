@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Edit Guide — Restaurant Website Kit</title>
+<style>
+  body{font-family:Georgia,'Times New Roman',serif;max-width:720px;margin:40px auto;padding:0 24px;color:#1a1d24;line-height:1.6;font-size:15px}
+  h1{font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;margin-bottom:4px}
+  h2{font-family:Arial,Helvetica,sans-serif;font-size:1.05rem;margin:26px 0 8px;border-bottom:2px solid #d95d27;padding-bottom:4px}
+  .sub{color:#667;margin-bottom:24px}
+  code,pre{font-family:Consolas,Menlo,monospace;background:#f8f3ec;border-radius:4px;font-size:.86em}
+  code{padding:2px 6px}
+  pre{padding:12px 16px;overflow-x:auto}
+  ol li,ul li{margin-bottom:6px}
+  .tip{background:#fdf2e7;border-left:4px solid #d95d27;padding:10px 14px;border-radius:0 6px 6px 0;margin:14px 0}
+  @media print{body{margin:0;font-size:12px}}
+</style>
+</head>
+<body>
+
+<h1>Restaurant Website Kit — Edit Guide</h1>
+<p class="sub">Everything lives in one file: <code>index.html</code>. Open it in any text editor. No installs, no build tools, no monthly fees.</p>
+
+<h2>1. Make it yours (5 minutes)</h2>
+<ol>
+  <li><strong>Restaurant name:</strong> search for <code>Saffron House</code> (and <code>Saffron</code> in the logo) and replace with your name. Update the <code>&lt;title&gt;</code> and <code>&lt;meta name="description"&gt;</code> at the top.</li>
+  <li><strong>WhatsApp ordering:</strong> search for <code>8801XXXXXXXXX</code> — it appears in 3 buttons. Replace with your WhatsApp number: country code + number, no plus sign, no spaces (e.g. <code>8801712345678</code>). The pre-filled message after <code>?text=</code> is editable too.</li>
+  <li><strong>Address &amp; phone:</strong> edit the "Find us" card, and put your real address into the Google Maps link (<code>https://maps.google.com/?q=YOUR+ADDRESS</code>).</li>
+  <li><strong>Hours:</strong> edit the rows in the "Opening hours" table. The highlighted row uses <code>class="today"</code> — move it to whichever row you want emphasized.</li>
+  <li><strong>Daily special banner:</strong> the orange strip under the hero — edit the text or delete the whole <code>&lt;div class="strip"&gt;</code> line.</li>
+</ol>
+
+<h2>2. Edit the menu (the part you'll touch most)</h2>
+<p>Each dish is one small block — copy-paste to add, delete to remove:</p>
+<pre>&lt;div class="item"&gt;
+  &lt;div&gt;
+    &lt;div class="nm"&gt;Dish name&lt;/div&gt;
+    &lt;div class="ds"&gt;Short description&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="price"&gt;9.90&lt;/div&gt;
+&lt;/div&gt;</pre>
+<div class="tip"><strong>Currency:</strong> prices show a <code>$</code> automatically. To change it, edit one line at the top: <code>--currency:'$';</code> — set it to <code>'৳'</code>, <code>'€'</code>, <code>'Rs '</code>, anything.</div>
+
+<h2>3. Swap the images</h2>
+<p>All images are in <code>images/</code>. Replace them with real photos of your food — keep the same file names and you never touch the code. JPG/PNG work the same: <code>src="images/hero.jpg"</code>.</p>
+<ul>
+  <li><code>hero.svg</code> — main food shot (landscape)</li>
+  <li><code>dish-1.svg</code> … <code>dish-4.svg</code> — gallery (square photos look best)</li>
+</ul>
+
+<h2>4. Rebrand colors &amp; fonts (30 seconds)</h2>
+<p>One marked block at the top of <code>index.html</code>:</p>
+<pre>:root{
+  --brand:#d95d27;     /* buttons, accents */
+  --green:#2f5d46;     /* secondary accent */
+  --bg:#fff8f0;        /* page background */
+  --currency:'$';
+  ...
+}</pre>
+<p>Change <code>--brand</code> and <code>--green</code> and the whole site rebrands. Fonts: swap the Google Fonts <code>&lt;link&gt;</code> and the <code>--font-head</code> / <code>--font-body</code> names.</p>
+
+<h2>5. Reviews &amp; socials</h2>
+<ul>
+  <li>Replace the three review cards with real customer quotes (or delete the section until you have them).</li>
+  <li>In the <code>&lt;footer&gt;</code>, point Facebook/Instagram/TikTok links at your pages; delete the ones you don't use.</li>
+</ul>
+
+<h2>6. Put it online (free)</h2>
+<ul>
+  <li><strong>Netlify:</strong> app.netlify.com → drag the whole folder onto the page. Live in 30 seconds, free.</li>
+  <li><strong>GitHub Pages / Vercel:</strong> also free — push the folder and enable Pages, or import on vercel.com.</li>
+</ul>
+
+<div class="tip"><strong>Stuck?</strong> Message me on Gumroad — I reply within 24 hours.</div>
+
+</body>
+</html>

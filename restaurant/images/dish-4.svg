@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#fdeede"/>
+  <circle cx="110" cy="120" r="140" fill="#f5dfc6"/>
+  <ellipse cx="400" cy="700" rx="250" ry="26" fill="#2b2118" opacity="0.07"/>
+  <!-- glass 1: mango lassi -->
+  <g transform="translate(300,180)">
+    <path d="M-60 0 L60 0 L48 420 L-48 420 Z" fill="#ffffff" stroke="#e3d2ba" stroke-width="4"/>
+    <path d="M-52 80 L52 80 L44 412 L-44 412 Z" fill="#f4a83d"/>
+    <path d="M-52 80 L52 80 L49 140 L-49 140 Z" fill="#fbd089"/>
+    <rect x="18" y="-60" width="9" height="160" rx="4.5" fill="#d95d27" transform="rotate(10 22 20)"/>
+    <ellipse cx="-22" cy="-4" rx="16" ry="8" fill="#3f7a55"/>
+  </g>
+  <!-- glass 2: lime cooler -->
+  <g transform="translate(520,260)">
+    <rect x="-55" y="0" width="110" height="340" rx="18" fill="#ffffff" stroke="#e3d2ba" stroke-width="4"/>
+    <rect x="-47" y="60" width="94" height="272" rx="14" fill="#bede78"/>
+    <rect x="-47" y="60" width="94" height="26" fill="#dff0b2"/>
+    <!-- ice cubes -->
+    <rect x="-34" y="100" width="34" height="34" rx="8" fill="#ffffff" opacity="0.75" transform="rotate(12 -17 117)"/>
+    <rect x="2" y="170" width="34" height="34" rx="8" fill="#ffffff" opacity="0.75" transform="rotate(-14 19 187)"/>
+    <rect x="-28" y="240" width="34" height="34" rx="8" fill="#ffffff" opacity="0.75" transform="rotate(7 -11 257)"/>
+    <!-- lime wheel on rim -->
+    <circle cx="52" cy="6" r="34" fill="#9ec653"/>
+    <circle cx="52" cy="6" r="26" fill="#d8eba0"/>
+    <g stroke="#9ec653" stroke-width="4">
+      <path d="M52 -18 L52 30 M30 6 L74 6 M37 -10 L67 22 M67 -10 L37 22"/>
+    </g>
+    <ellipse cx="-18" cy="52" rx="14" ry="7" fill="#3f7a55"/>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#fdeedd"/>
+  <circle cx="120" cy="680" r="150" fill="#f5dfc2"/>
+  <ellipse cx="400" cy="660" rx="240" ry="28" fill="#2b2118" opacity="0.08"/>
+  <!-- board -->
+  <ellipse cx="400" cy="620" rx="260" ry="46" fill="#c98c4e"/>
+  <ellipse cx="400" cy="610" rx="260" ry="46" fill="#dba262"/>
+  <!-- bottom bun -->
+  <path d="M250 560 q150 60 300 0 l0 -30 q-150 40 -300 0 Z" fill="#e8b15c"/>
+  <!-- patty 1 -->
+  <rect x="245" y="495" width="310" height="42" rx="21" fill="#7a4426"/>
+  <!-- cheese -->
+  <path d="M250 500 L550 500 L520 532 L470 504 L420 534 L370 504 L320 534 L280 504 Z" fill="#f4b13d"/>
+  <!-- patty 2 -->
+  <rect x="252" y="452" width="296" height="40" rx="20" fill="#8a4f2c"/>
+  <!-- lettuce -->
+  <path d="M240 452 q20 18 40 0 q20 18 40 0 q20 18 40 0 q20 18 40 0 q20 18 40 0 q20 18 40 0 q20 18 40 0 l0 -22 l-280 0 Z" fill="#5a9a4e"/>
+  <!-- tomato -->
+  <rect x="262" y="412" width="276" height="22" rx="11" fill="#d9482f"/>
+  <!-- top bun -->
+  <path d="M255 415 q145 -130 290 0 Z" fill="#e8a953"/>
+  <path d="M255 415 q145 -130 290 0 Z" fill="none" stroke="#d18f3c" stroke-width="4"/>
+  <g fill="#fdf3df">
+    <ellipse cx="350" cy="350" rx="9" ry="5"/><ellipse cx="410" cy="335" rx="9" ry="5"/><ellipse cx="460" cy="360" rx="9" ry="5"/><ellipse cx="320" cy="380" rx="8" ry="4.5"/><ellipse cx="490" cy="390" rx="8" ry="4.5"/>
+  </g>
+  <!-- skewer -->
+  <rect x="396" y="240" width="8" height="120" rx="4" fill="#8a6240"/>
+  <rect x="380" y="222" width="40" height="26" rx="8" fill="#d95d27"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121620"/>
+      <stop offset="1" stop-color="#0b0d12"/>
+    </linearGradient>
+    <linearGradient id="aa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ea8fe"/>
+      <stop offset="1" stop-color="#9b8cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#abg)"/>
+  <circle cx="680" cy="700" r="220" fill="#6ea8fe" opacity="0.07"/>
+  <circle cx="90" cy="110" r="150" fill="#9b8cff" opacity="0.08"/>
+  <!-- desk -->
+  <rect x="80" y="560" width="640" height="18" rx="9" fill="#222a39"/>
+  <!-- monitor -->
+  <rect x="180" y="220" width="440" height="290" rx="18" fill="#161b27" stroke="#222a39" stroke-width="2"/>
+  <rect x="200" y="240" width="400" height="250" rx="10" fill="#0b0d12"/>
+  <rect x="370" y="510" width="60" height="36" fill="#161b27"/>
+  <rect x="320" y="546" width="160" height="14" rx="7" fill="#222a39"/>
+  <!-- code on screen -->
+  <g font-family="Consolas, monospace" font-size="17">
+    <text x="222" y="278" fill="#9b8cff">&lt;section class="hero"&gt;</text>
+    <text x="244" y="308" fill="#6ea8fe">&lt;h1&gt;<tspan fill="#e8ecf4">Hello, world.</tspan>&lt;/h1&gt;</text>
+    <text x="244" y="338" fill="#97a3b6">// design that ships</text>
+    <text x="244" y="368" fill="#3ddc84">const launch = true;</text>
+    <text x="222" y="398" fill="#9b8cff">&lt;/section&gt;</text>
+  </g>
+  <rect x="222" y="420" width="180" height="38" rx="19" fill="url(#aa)"/>
+  <text x="312" y="445" text-anchor="middle" fill="#0b0d12" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Deploy</text>
+  <!-- coffee -->
+  <rect x="650" y="500" width="54" height="60" rx="10" fill="#161b27" stroke="#222a39"/>
+  <path d="M704 515 q26 4 0 30" fill="none" stroke="#222a39" stroke-width="8" stroke-linecap="round"/>
+  <path d="M664 488 q6 -12 0 -22 M682 488 q6 -12 0 -22" fill="none" stroke="#97a3b6" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <!-- plant -->
+  <rect x="110" y="510" width="56" height="50" rx="8" fill="#161b27" stroke="#222a39"/>
+  <path d="M138 510 C120 470 110 460 96 450 M138 510 C140 462 146 446 162 430 M138 510 C156 472 168 466 184 458" fill="none" stroke="#3ddc84" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+</svg>
